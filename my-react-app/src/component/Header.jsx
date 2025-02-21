@@ -10,8 +10,8 @@ function Header() {
         <div className="nav">
           <img src={logo} alt="header-logo" />
           <div className="nav_link">
-            <li><Link to="/home" >Accueil</Link></li> 
-            <li><Link to="/about"> A propos</Link> </li> 
+            <Link to="/" >Accueil</Link>
+            <Link to="/about"> A propos</Link>
           </div>
         </div>
       </nav>

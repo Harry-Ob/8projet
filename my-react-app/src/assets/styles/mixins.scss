@@ -1,0 +1,38 @@
+@mixin name1{
+    display: flex;
+    flex-direction: row;
+
+}
+
+// te prends pas la tete avec tes 
+// @mixin truc(arg) {
+
+//     display: flex; 
+//     flex-direction: row;
+//     justify-content: space-between;
+
+
+// }
+
+@mixin name2{
+    // pour la nav bar du header 
+    // @truc() 
+    align-items: center;
+
+    // pour acc- apropos
+    display: flex ; 
+    flex-direction: row;
+    justify-items: space-between;
+    gap:50px ; 
+    // sur le a: => color noir et retirer le faite que ce soit souligner + taille 
+    font-size:1.5rem ; 
+
+
+    // pour le oupps 
+    color:$main-color; 
+    font-size:2.25rem;
+
+    // pour le reste 
+    color:black; 
+
+}

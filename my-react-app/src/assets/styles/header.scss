@@ -1,3 +1,46 @@
-.nav{
+@use "variables" as * ;
+
+// .nav{
     
+// }
+
+.nav {
+    display: flex;
+    justify-content: space-between; // Espace entre le logo et le menu
+    align-items: center;
+    padding: 20px 40px; // Espacement interne
+    background-color: white; // Couleur de fond (modifiable)
+    
+    &_link{
+        display:flex;
+        gap:20px; 
+    }
+    
+    .logo {
+        font-size: 2rem;
+        font-weight: bold;
+        color: $main-color;
+        text-decoration: none;
+
+        img {
+            height: 40px; // Taille du logo
+        }
+    }
+
+    .nav {
+        display: flex;
+        gap: 20px; // Espacement entre les liens
+
+        a {
+            font-size: 1.2rem;
+            text-decoration: none;
+            color: black;
+            font-weight: 500;
+            transition: color 0.3s ease;
+
+            &:hover {
+                color: $main-color;
+            }
+        }
+    }
 }

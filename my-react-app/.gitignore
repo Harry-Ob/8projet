@@ -22,3 +22,7 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# File made to useContext but not kept on this version -> available for another one 
+src/Logement.jsx
+src/ContexteHome.jsx

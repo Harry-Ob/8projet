@@ -1,8 +1,109 @@
 @use "variables" as * ;
 
-// .nav{
-    
-// }
+@use "variables" as *;
+
+/* Mobile-first styles */
+.nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    gap: 26px;
+    flex: 1 0 0;
+    margin: 24px auto 0; /* Matches Tailwind's mx-auto mt-6 */
+    padding: 20px 40px;
+    background-color: white;
+    width: 100%; /* Full width on mobile, like Tailwind container */
+    max-width: 640px; /* Starting point for container-like behavior */
+
+    .logo {
+        width: 145px;
+        height: 46.881px;
+        flex-shrink: 0;
+    }
+
+    &_link {
+        display: flex;
+        gap: 20px;
+
+        a {
+            font-size: 1.2rem;
+            text-decoration: none;
+            color: black;
+            font-weight: 500;
+            transition: color 0.3s ease;
+
+            &:hover {
+                color: $main-color;
+            }
+        }
+    }
+}
+
+/* Desktop styles */
+@media (min-width: 768px) {
+    .nav {
+        display: flex;
+        width: 1240px; /* Specified desktop width */
+        height: 68px;
+        justify-content: center;
+        align-items: center;
+        // gap: 720.678px;
+        flex: unset; /* Reset mobile flex property */
+        margin: 24px auto 0; /* Matches Tailwind's mx-auto mt-6 */
+        padding: 20px 40px;
+        background-color: white;
+        max-width: 1240px; /* Matches specified width, centered */
+    }
+
+    .logo {
+        width: 210.322px;
+        height: 68px;
+        flex-shrink: 0;
+    }
+
+    .nav_link {
+        display: flex;
+        gap: 20px;
+
+        a {
+            font-size: 1.2rem;
+            text-decoration: none;
+            color: black;
+            font-weight: 500;
+            transition: color 0.3s ease;
+
+            &:hover {
+                color: $main-color;
+            }
+        }
+    }
+}
+
+/* Tailwind-like container breakpoints */
+@media (min-width: 640px) {
+    .nav {
+        max-width: 640px;
+    }
+}
+
+@media (min-width: 768px) {
+    .nav {
+        max-width: 768px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .nav {
+        max-width: 1024px;
+    }
+}
+
+@media (min-width: 1280px) {
+    .nav {
+        max-width: 1240px; /* Matches your specified desktop width */
+    }
+}
+
 
 .nav {
     display: flex;
@@ -44,3 +145,5 @@
         }
     }
 }
+
+

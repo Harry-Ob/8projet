@@ -1,15 +1,16 @@
 
 import { Link } from "react-router-dom"; // Import React Router components
 import logo from "../assets/img/LOGO-header-kai.png";
-import "../assets/styles/header.scss"
+// import "../assets/styles/header.scss"
 
 function Header() {
   return (
-    <header>
+    <header className="max-w-6xl mx-auto px-4 py-10">
       <nav>
-        <div className="nav">
-          <img src={logo} alt="header-logo" />
-          <div className="nav_link">
+        <div className="flex items-center justify-between">
+          <img src={logo} alt="header-logo" className="h-12 w-auto"/>
+          {/* nav_link could be deleted here as much as logo which was used in img */}
+          <div className="flex gap-6 sm:flex-row sm:gap-4 nav_link">
             <Link to="/" >Accueil</Link>
             <Link to="/about"> A propos</Link>
           </div>

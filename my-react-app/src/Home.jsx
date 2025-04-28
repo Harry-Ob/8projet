@@ -13,7 +13,8 @@ function Home() {
   useEffect(() => {
     const fetchLogements = async () => {
       try {
-        const response = await fetch("../public/logements.json"); // Fetch from public folder
+        // the root is where the file start so no need to add public/ before it
+        const response = await fetch("/logements.json"); // Fetch from public folder
         if (!response.ok) throw new Error("Failed to load data");
 
         const data = await response.json();
@@ -39,15 +40,20 @@ function Home() {
           {/* w-[335px] h-[111px] */}
           {/* tricks with absolute and relative to make sure ur text stays in the middle no matter what  */}
           <div  className="relative 
-          
-          sm:h-64 sm:w-full
-          md:h-96 
-          lg:h-56 lg:w-7xl 
-          flex items-center justify-center bg-cover bg-center before:absolute before:inset-0 before:bg-black/60 before:mix-blend-darken "
+          sm:h-48 sm:w-full
+          md:h-56 md:container md:mx-auto md:w-full
+          lg:h-56 lg:max-w-7xl 
+          flex items-center justify-center
+          bg-cover bg-center 
+          before:absolute before:inset-0 before:bg-black/60 before:mix-blend-darken "
           style={{
             backgroundImage: `url(${bg_img})`, // Change this!
           }}>
-          <h2 className="text-2xl font-bold mb-6 text-white text-white drop-shadow-[0_2px_2px_rgba(0,0,0,0.8)] text-center px-4">
+          <h2 className="relative z-10 w-full 
+          pb-[50px] pt-[50px]
+          text-2xl font-bold 
+          mb-6 mt-6 
+          text-white text-white drop-shadow-[0_2px_2px_rgba(0,0,0,0.8)] text-center px-4">
         Chez vous, partout et ailleurs
       </h2>
 

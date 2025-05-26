@@ -1,7 +1,5 @@
 import PropTypes from "prop-types";
 import { useState } from "react";
-// import arrowLeft from '../assets/img/arrow-left.svg';
-// import arrowRight from '../assets/img/arrow-right.svg';
 
 
 function Slider ({list_img}) {
@@ -30,27 +28,26 @@ function Slider ({list_img}) {
       {/* Previous Button */}
       <button
         onClick={prevImage}
-        className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-gray-800 bg-opacity-50 text-white p-2 rounded-full hover:bg-opacity-75 transition"
+        className="absolute left-4 top-1/2 transform -translate-y-1/2 text-white  "
       >
         {/* left arrow  */}
-        {/* <img src={arrowLeft} alt="Previous" className=""/> */}
-        <i className="fa-solid fa-arrow-left"></i>
-        {/* ❮ */}
+      
+        <i className="fa-solid fa-sharp fa-chevron-down rotate-90 text-[1.5rem] md:text-[3rem]"></i>
+       
       </button>
       
       {/* Next Button */}
       <button
         onClick={nextImage}
-        className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-gray-800 bg-opacity-50 text-white p-2 rounded-full hover:bg-opacity-75 transition"
+        className="absolute right-4 top-1/2 transform -translate-y-1/2 text-white  "
       >
         {/* right arrow */}
-        <i className="fa-solid fa-arrow-right"></i>
-        {/* <img src={arrowRight} alt="next" className=""/> */}
-        {/* ❯ */}
+        <i className="fa-solid fa-sharp fa-chevron-up rotate-90 text-[1.5rem] md:text-[3rem]"></i>
+       
       </button>
       
       {/* Image Counter */}
-      <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-gray-800 bg-opacity-50 text-white px-3 py-1 rounded-full">
+      <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 text-white px-3 py-1">
         {currentImage + 1}/{len_pic}
       </div>
     </div>

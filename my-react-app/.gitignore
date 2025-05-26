@@ -26,3 +26,9 @@ dist-ssr
 # File made to useContext but not kept on this version -> available for another one 
 src/Logement.jsx
 src/ContexteHome.jsx
+src/Collaps.jsx
+
+
+# Image file not needed here -> Fa used instead 
+src/assets/img/*.svg 
+src/assets/img/arrow*

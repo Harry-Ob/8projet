@@ -1,5 +1,12 @@
 import { useParams, useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
+import Collapsible from "./component/Collapsible";
+import Slider from "./component/Slider";
+
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+// import { faChevronUp, faChevronRight } from '@fortawesome/free-solid-svg-icons';
+// import { faArrowUp, faArrowRight } from '@fortawesome/free-solid-svg-icons';
+// import { faAtom } from '@fortawesome/free-solid-svg-icons'
 
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // import { faChevronLeft, faChevronRight } from "@fortawesome/free-solid-svg-icons";
@@ -32,48 +39,51 @@ function Fiche_logement() {
   }, [id, navigate]);
 
   if (loading) return <p>Chargement...</p>;
-
-  // To manage slider index
-  // const [currentImage, setCurrentImage] = useState(0);
-  // const len_pic = logement.pictures.length ;
-  // const nextImage = () => {
-  //   setCurrentImage((next) => (next + 1) %len_pic );
-  // };
-
-  // const prevImage = () => {
-  //   setCurrentImage((prev) => (prev - 1 + logement.pictures.length) % len_pic);
-  // };
+  // const isOpen = true; 
+// const element = <FontAwesomeIcon icon={faAtom} />
 
   // if (!logement) return <p>Logement non trouvé.</p>;
-  function show_all() {}
-
-  function show_one() {}
   return (
+    
       <div className="p-4">
+    
         {/* {logement.pictures > 0 ? show_all() : show_one() } */}
         {/* on my end i need every data  */}
         {/* .cover .description .equipements .host.name .host.picture (of the host ) .location .ratin .tags */}
 
         {/* Slider */}
-        <div className="relative w-full h-64 overflow-hidden rounded-xl mb-6">
+
+        <div>
+          <Slider list_img={logement.pictures}/>
+        </div>
+        {/* <div className="relative w-full h-64 overflow-hidden rounded-xl mb-6">
           <img
             src={logement.cover}
             alt={logement.title}
             className="w-full h-full object-cover"
-          />
-          </div>
-          <div>
+          /> */}
+          {/* <div>
+          <FontAwesomeIcon icon={faArrowUp} />
+          </div> */}
+
+          {/* <FontAwesomeIcon icon={}/> */}
+          {/* <i className={`fa-solid ${isOpen ? 'fa-arrow-up' : 'fa-arrow-right'} mr-2`}></i>
+          </div> */}
+
+
+          
+          <div className="flex flex-column">
             {/* Title and Location */}
-            <p> dsds le nombre dimage est {logement.pictures.length}</p>
-            <h1 className="text-2xl font-bold">{logement.title}</h1>
-            <p className="text-gray-500">{logement.location}</p>
+            {/* <p> le nombre dimage est {logement.pictures.length}</p> */}
+            <h1 className="text-2xl text-[#FF6060]">{logement.title}</h1>
+            <p className="text-black">{logement.location}</p>
 
             {/* Tags */}
             <div className="flex flex-wrap gap-2 my-4">
               {logement.tags.map((tag) => (
                 <span
                   key={tag}
-                  className="bg-black text-white px-3 py-1 rounded-full text-sm"
+                  className="bg-[#FF6060] text-white px-3 py-1 rounded-full text-sm"
                 >
                   {tag}
                 </span>
@@ -96,8 +106,14 @@ function Fiche_logement() {
           {/* my stars goes there */}
         </div>
 
-        
+        {/* const list_titles = ["Description","Equipemenmt"] ;  */}
+        {/* look how to create manage your props and why u need to use that structure and not another one  */}
       {/* Collapsible Components */}
+      {/* list_title ={["Description","Equipemenmt"]}  */}
+      {   }
+      <Collapsible title="Description" content={logement.description}/>
+      <Collapsible title="Equipement" content={logement.equipments}/>
+      {/* <Collapsible list_titles={["Description","Equipemenmt"]} list_content={[logement.description , logement.equipments]}/> */}
       {/* <div className="flex flex-col gap-4">
         <Collapsible title="Description">
           <p>{logement.description}</p>
@@ -111,7 +127,7 @@ function Fiche_logement() {
         </Collapsible>
       </div> */}
 
-
+{/* content and titles  */}
             
 
             {/* <p>{logement.title}</p>
@@ -161,7 +177,7 @@ function Fiche_logement() {
         {/* go back to take a lil class with REACT for loops and how to show variable and others stuff needed to be faster  */}
 
         {/* Make a button or something to come back if needs be  */}
-        <button onClick={() => navigate("/")}>⬅️ sheesh Retour</button>
+        {/* <button >⬅️  Retour</button> */}
         {/*  Collapsibale item that can be open and use here, pay attention to use it also in about page => component to be created */}
         {/*  */}
       </div>

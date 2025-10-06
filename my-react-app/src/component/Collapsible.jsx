@@ -14,7 +14,7 @@ function Collapsible ({ title, content }) {
 
 
     return (
-  <div className="w-full max-w-md mx-auto mb-4">
+  <div className="w-full max-w mx-auto ">
     <div
       className="flex items-center justify-between p-3 bg-[#FF6060] text-white rounded-md cursor-pointer"
       onClick={toggleSection}
@@ -25,7 +25,7 @@ function Collapsible ({ title, content }) {
       ></i>
     </div>
     {open_collapsible ? (
-      <div className="p-3 bg-white text-black rounded-b-md">
+      <div className="p-3 bg-[#dee2e6] text-black rounded-b-md">
         {isArray ? (
           <ul className="list-disc pl-5">
             {content.map((item, index) => (

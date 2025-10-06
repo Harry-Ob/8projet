@@ -16,8 +16,9 @@ function Slider ({list_img}) {
   };
 
   return (
+    // faire un petit test sur cela 
     //  what have u done when there is just one picture and not more ? u need to manage that u have some test 
-    <div className="relative w-full max-w-2xl mx-auto">
+    <div className="relative w-full mx-auto">
       {/* Image Display */}
       <img
         src={list_img[currentImage]}

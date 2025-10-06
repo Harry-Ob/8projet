@@ -40,6 +40,7 @@ function Home() {
           {/* w-[335px] h-[111px] */}
           {/* tricks with absolute and relative to make sure ur text stays in the middle no matter what  */}
           <div  className="relative 
+          xs:h-48 xs:w-full
           sm:h-48 sm:w-full
           md:h-56 md:container md:mx-auto md:w-full
           lg:h-56 lg:max-w-7xl 

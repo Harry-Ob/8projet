@@ -22,8 +22,6 @@ function Ratings( stars ){
 </div>
         
     )
-
-    //  i know i need 5 stars at the end i just give it the number from the logement and then i code the rest 
 }
 
 

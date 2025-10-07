@@ -13,7 +13,6 @@ function App() {
   return (
     <>
       <BrowserRouter>
-        
         <div className=" mx-auto mt-6 px-8">
           <Header />
           <Routes>

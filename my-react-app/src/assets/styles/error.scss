@@ -1,11 +1,8 @@
-@use "variables" as * ;
+@use "variables" as *;
 
-
-.err{
-    display: block;
-    color: $main-color ; 
-    font-size: 18rem;
-    font-family:'Montserrat';
-
+.err {
+  display: block;
+  color: $main-color;
+  font-size: 18rem;
+  font-family: "Montserrat";
 }
-

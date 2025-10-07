@@ -16,41 +16,38 @@ function Slider ({list_img}) {
   };
 
   return (
-    // faire un petit test sur cela 
-    //  what have u done when there is just one picture and not more ? u need to manage that u have some test 
     <div className="relative w-full mx-auto">
       {/* Image Display */}
+
       <img
         src={list_img[currentImage]}
         alt={`Slide ${currentImage + 1}`}
         className="w-full h-96 object-cover rounded-lg"
       />
-      
-      {/* Previous Button */}
+        {len_pic !== 1 && (
       <button
         onClick={prevImage}
         className="absolute left-4 top-1/2 transform -translate-y-1/2 text-white  "
       >
-        {/* left arrow  */}
-      
         <i className="fa-solid fa-sharp fa-chevron-down rotate-90 text-[1.5rem] md:text-[3rem]"></i>
-       
       </button>
-      
-      {/* Next Button */}
+        )} 
+     
+     {len_pic !== 1 && (
       <button
         onClick={nextImage}
         className="absolute right-4 top-1/2 transform -translate-y-1/2 text-white  "
       >
-        {/* right arrow */}
         <i className="fa-solid fa-sharp fa-chevron-up rotate-90 text-[1.5rem] md:text-[3rem]"></i>
-       
       </button>
+      )} 
       
-      {/* Image Counter */}
+      {len_pic !== 1 && (
       <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 text-white px-3 py-1">
         {currentImage + 1}/{len_pic}
       </div>
+       )} 
+
     </div>
     ); 
 }

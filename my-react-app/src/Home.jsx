@@ -34,7 +34,7 @@ function Home() {
   if (loading) return <p>Loading...</p>;
   return (
     <section className="max-w-6xl mx-auto px-4 py-10">
-      <div className="rounded-xl border-2 border-blue-500 overflow-hidden ">
+      <div className="rounded-xl border-2 border-transparent overflow-hidden  mb-7 ">
         {/* w-[335px] h-[111px] */}
         {/* tricks with absolute and relative to make sure ur text stays in the middle no matter what  */}
         <div

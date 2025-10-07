@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react"; // ✅ Correct Import
 import { Link } from "react-router-dom";
-import bg_img from "./assets/img/image1.jpeg" ;
+import bg_img from "./assets/img/image1.jpeg";
 // import {useHousing} from "./ContexteHome.jsx"
 
 function Home() {
@@ -30,16 +30,15 @@ function Home() {
     fetchLogements();
   }, []);
 
-  // const { logements, loading} = context_home() ; 
+  // const { logements, loading} = context_home() ;
   if (loading) return <p>Loading...</p>;
   return (
     <section className="max-w-6xl mx-auto px-4 py-10">
-
-      
-        <div className="rounded-xl border-2 border-blue-500 overflow-hidden ">
-          {/* w-[335px] h-[111px] */}
-          {/* tricks with absolute and relative to make sure ur text stays in the middle no matter what  */}
-          <div  className="relative 
+      <div className="rounded-xl border-2 border-blue-500 overflow-hidden ">
+        {/* w-[335px] h-[111px] */}
+        {/* tricks with absolute and relative to make sure ur text stays in the middle no matter what  */}
+        <div
+          className="relative 
           xs:h-48 xs:w-full
           sm:h-48 sm:w-full
           md:h-56 md:container md:mx-auto md:w-full
@@ -49,21 +48,21 @@ function Home() {
           before:absolute before:inset-0 before:bg-black/60 before:mix-blend-darken "
           style={{
             backgroundImage: `url(${bg_img})`, // Change this!
-          }}>
-          <h2 className="relative z-10 w-full 
+          }}
+        >
+          <h2
+            className="relative z-10 w-full 
           pb-[50px] pt-[50px]
           text-2xl font-bold 
           mb-6 mt-6 
-          text-white text-white drop-shadow-[0_2px_2px_rgba(0,0,0,0.8)] text-center px-4">
-        Chez vous, partout et ailleurs
-      </h2>
-
-          </div>
+          text-white text-white drop-shadow-[0_2px_2px_rgba(0,0,0,0.8)] text-center px-4"
+          >
+            Chez vous, partout et ailleurs
+          </h2>
         </div>
-      
-      {/* h2 title */}
-      
+      </div>
 
+      {/* h2 title */}
 
       {/* Grid container */}
       <div className=" bg-gray-100 p-6 rounded-2xl mt-6">
@@ -75,8 +74,8 @@ function Home() {
                   className="relative h-72 rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300"
                   style={{
                     backgroundImage: `url(${lg.cover})`,
-                    backgroundSize: 'cover',
-                    backgroundPosition: 'center',
+                    backgroundSize: "cover",
+                    backgroundPosition: "center",
                   }}
                 >
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />

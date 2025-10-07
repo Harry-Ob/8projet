@@ -27,7 +27,8 @@ function About() {
 
   return (
     <div className="flex flex-col">
-      <div className="rounded-xl border-2 border-blue-500 overflow-hidden  mb-7 ">
+      {/*  le border doit etre transparent ici  */}
+      <div className="rounded-xl border-2 border-transparent overflow-hidden  mb-7 ">
         {/* tricks with absolute and relative to make sure ur text stays in the middle no matter what  */}
         <div
           className="relative 
@@ -36,7 +37,7 @@ function About() {
                 lg:h-56 
                 flex items-center justify-center
                 bg-cover bg-center 
-                before:absolute before:inset-0 before:bg-black/60 before:mix-blend-darken 
+                before:absolute before:inset-0 before:mix-blend-darken 
                 h-[111px]"
           style={{
             backgroundImage: `url(${bg_img})`, // Change this!
@@ -48,8 +49,11 @@ function About() {
         </div>
       </div>
 
-
-     { aproposData.map( (item,index) => <Collapsible key={index} title={item.title} content={item.content}/>)}
+      <div className="flex flex-col gap-3 mb-4">
+        {aproposData.map((item, index) => (
+          <Collapsible key={index} title={item.title} content={item.content} />
+        ))}
+      </div>
     </div>
   );
 }

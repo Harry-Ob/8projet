@@ -18,7 +18,6 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
-            {/* <Route path="/contact" element={<Contact />} /> */}
             <Route path="*" element={<Error />} /> {/* Catch-all for 404 */}
             <Route path="/404" element={<Error />} />
             <Route path="/logement/:id" element={<Fiche_logement />} />

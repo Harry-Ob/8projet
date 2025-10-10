@@ -27,7 +27,6 @@ function About() {
 
   return (
     <div className="flex flex-col">
-      {/*  le border doit etre transparent ici  */}
       <div className="rounded-xl border-2 border-transparent overflow-hidden  mb-7 ">
         {/* tricks with absolute and relative to make sure ur text stays in the middle no matter what  */}
         <div
@@ -43,9 +42,6 @@ function About() {
             backgroundImage: `url(${bg_img})`, // Change this!
           }}
         >
-          {/* // the first argument is an array 
-// the 2nd is an array : with a string and an array 
-// list_titles, list_content */}
         </div>
       </div>
 

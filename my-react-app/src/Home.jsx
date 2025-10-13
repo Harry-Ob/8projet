@@ -18,7 +18,7 @@ function Home() {
         if (!response.ok) throw new Error("Failed to load data");
 
         const data = await response.json();
-        console.log(data);
+        // console.log(data);
         setLogements(data);
       } catch (error) {
         console.error("Error fetching logements:", error);

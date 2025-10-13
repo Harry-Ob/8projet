@@ -3,7 +3,7 @@ function Ratings(stars) {
   
   return (
     <div className="flex flex-row gap-2">
-      {console.log(stars.stars)}
+      {/* {console.log(stars.stars)} */}
       {/* Stars: {stars} */}
       {[...Array(5)].map((_, index) => (
         <i

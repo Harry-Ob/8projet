@@ -1,5 +1,5 @@
-import { useNavigate } from "react-router-dom";
-import { Link } from "react-router-dom"; // Import React Router components
+import { NavLink, useNavigate } from "react-router-dom";
+// import { Link } from "react-router-dom"; // Import React Router components
 import logo from "../assets/img/LOGO-header-kai.png";
 // import "../assets/styles/header.scss"
 
@@ -15,9 +15,9 @@ function Header() {
             className="h-12 w-auto"
             onClick={() => navigate("/")}
           />
-          <div className="flex gap-6 sm:flex-row sm:gap-4 nav_link">
-            <Link to="/">Accueil</Link>
-            <Link to="/about"> A propos</Link>
+          <div className="flex gap-6 sm:flex-row sm:gap-4 nav_link uppercase md:normal-case">
+            <NavLink to="/" className={ ({isActive}) => isActive ? "underline" : ""}> Accueil </NavLink>
+            <NavLink to="/about" className={ ({isActive}) => isActive ? "underline" : ""}>A propos </NavLink>
           </div>
         </div>
       </nav>

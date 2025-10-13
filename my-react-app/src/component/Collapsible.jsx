@@ -7,7 +7,7 @@ function Collapsible({ title, content }) {
   // Toggles the open/closed state of a collapsible section by updating open_collapsible state
   const toggleSection = () => {
     set_open_collapsible(!open_collapsible);
-    console.log("test", open_collapsible);
+    // console.log("test", open_collapsible);
   };
 
   return (
@@ -24,7 +24,8 @@ function Collapsible({ title, content }) {
         ></i>
       </div>
       {open_collapsible ? (
-        <div className="p-3 bg-[#dee2e6] text-black rounded-b-md">
+
+        <div className="p-3 bg-[#F5F5F5] text-black rounded-b-md">
           {isArray ? (
             <ul className="list-disc pl-5">
               {content.map((item, index) => (
